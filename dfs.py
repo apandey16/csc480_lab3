@@ -17,8 +17,12 @@ def dfs(graph, start, goal):
                     path[neighbor] = path[node] + [neighbor]  # Update the path for the neighbor
     return False
 
-# Example usage:
-graph = {'A': {'B', 'C'}, 'B': {'A', 'D', 'E'}, 'C': {'A', 'F'}, 'D': {'B'}, 'E': {'B', 'F'}, 'F': {'C', 'E'}}
-start_node = 'A'
-goal_node = 'F'
-print(dfs(graph, start_node, goal_node))
+def main():
+    # Example usage:
+    graph = {'A': {'B', 'C'}, 'B': {'A', 'D', 'E'}, 'C': {'A', 'F'}, 'D': {'B'}, 'E': {'B', 'F'}, 'F': {'C', 'E'}}
+    start_node = 'A'
+    goal_node = 'F'
+    print(dfs(graph, start_node, goal_node))
+
+if __name__ == '__main__':
+    main()
